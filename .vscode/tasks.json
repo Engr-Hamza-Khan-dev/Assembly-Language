@@ -1,0 +1,45 @@
+
+// For win64
+// {
+//   "version": "2.0.0",
+//   "tasks": [
+//     {
+//       "label": "Build and Run ASM",
+//       "type": "shell",
+//       "command": "nasm -f win64 \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.obj\" && gcc \"${fileDirname}\\${fileBasenameNoExtension}.obj\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
+//       "options": {
+//         "shell": {
+//           "executable": "C:\\Windows\\System32\\cmd.exe",
+//           "args": ["/c"]
+//         }
+//       },
+//       "group": {
+//         "kind": "build",
+//         "isDefault": true
+//       }
+//     }
+//   ]
+// }
+
+
+
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build and Run ASM COM",
+      "type": "shell",
+     "command": "nasm -f bin \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.com\" && \"${fileDirname}\\${fileBasenameNoExtension}.com\"",
+      "options": {
+        "shell": {
+          "executable": "C:\\Windows\\System32\\cmd.exe",
+          "args": ["/c"]
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
